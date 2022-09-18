@@ -1,0 +1,34 @@
+There should be only one top level OE owner.
+	(SELECT COUNT(1) FROM OES.PARENT_OE_ID IS NULL should return 1)
+
+Allocation should be started from the top level OE owner.
+	(OES.PARENT_OE_ID = NULL)
+If any intermediate OEOwner tries to access application otherwise, he should get error.
+	(SEAT_OE_MAPPING.LEVEL_1_OE_ID IS NULL AND EMPLOYEES.OE_ID == SEAT_OE_MAPPING.LEVEL_2_OE_ID OR
+	SEAT_OE_MAPPING.LEVEL_2_OE_ID IS NULL AND EMPLOYEES.OE_ID == SEAT_OE_MAPPING.LEVEL_3_OE_ID
+	SEAT_OE_MAPPING.LEVEL_3_OE_ID IS NULL AND EMPLOYEES.OE_ID == SEAT_OE_MAPPING.LEVEL_4_OE_ID)
+
+OE Owner should be able to see seats alloted to his OE
+	(EMPLOYEES.OE_ID == SEAT_OE_MAPPING.LEVEL_1_OE_ID OR
+	EMPLOYEES.OE_ID == SEAT_OE_MAPPING.LEVEL_2_OE_ID OR
+	EMPLOYEES.OE_ID == SEAT_OE_MAPPING.LEVEL_3_OE_ID OR
+	EMPLOYEES.OE_ID == SEAT_OE_MAPPING.LEVEL_4_OE_ID OR)
+Other seats would appear blank
+
+OE Owner should be able to see child OE codes that belong to him
+	(OES.PARENT_OE_ID = EMPLOYEES.OE_ID)
+, except parent, where he would be able to all.
+	(OES.OE_ID = EMPLOYEES.OE_ID AND ORS.PARENT_OE_ID IS NULL)
+
+OE Owner should select floo plan and OE Code
+Application should allocate the seats by considering - (a)Number of seats available (b)Number of seats required
+OE Owner should be able to publish his allocation, once completed.
+On publication, child OE Owners, should recieve email that they can take up the allocation now.
+And proess will follow.
+
+OE Owner should be able to select / deselect individual seats, on need basis.
+
+OE owner should be able to raise a request to get X number of seats for given period.
+Email would be sent to his peers and manager for further discusion.
+Once seat transfer is accepted, OE Owner should be able to re-assign the seats.
+Child OE Owners should be able to see the change now.
