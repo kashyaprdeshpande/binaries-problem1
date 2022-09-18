@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Floor Plan 10 x 16</title>
+<link rel="stylesheet" href="binaries.css">
+<script type="text/javascript" src="binaries.js"></script>
+</head>
+<body>
+<b><span id="notifications" style="color: #009900">Select floor first</span></b>
+<br><br>
+<table>
+	<tr>
+		<th>OE Code</th>
+		<th>OE Owner</th>
+		<th>OE Strength</th>
+		<th>OE Seats Limit</th>
+		<th>OE Seats Alloted</th>
+		<th>OE Seats Pending</th>
+		<th>OE Color Code</th>
+		<th></th>
+	</tr>
+	<tr id="OE-1">
+		<td>OE-1</td>
+		<td>OEOwner-1</td>
+		<td>400</td>
+		<td id="OE-1-limit">240</td>
+		<td id="OE-1-alloted">0</td>
+		<td id="OE-1-pending">240</td>
+		<td><input id="OE-1-color-code" type="color"></td>
+		<td><button onclick="allocate('OE-1')">allocate</button></td>
+	</tr>
+	<tr id="OE-2">
+		<td>OE-2</td>
+		<td>OEOwner-2</td>
+		<td>100</td>
+		<td id="OE-2-limit">60</td>
+		<td id="OE-2-alloted">0</td>
+		<td id="OE-2-pending">60</td>
+		<td><input id="OE-2-color-code" type="color"></td>
+		<td><button onclick="allocate('OE-2')">allocate</button></td>
+	</tr>
+	<tr>
+		<td colspan="8"><button>publish</button></td>
+	</tr>
+</table>
+<br>
+<table>
+	<tr>
+		<td id="floor_1" onclick="highlight_floor_plan('floor_1')" style="padding: 10px 10px 10px 10px">
+			<table>
+				<tr><td id="1.A.001">1.A.001</td><td id="1.A.002">1.A.002</td><td id="1.A.003">1.A.003</td><td rowspan="18">&nbsp;&nbsp;&nbsp;&nbsp;</td><td id="1.A.004">1.A.004</td><td id="1.A.005">1.A.005</td><td id="1.A.006">1.A.006</td><td id="1.A.007">1.A.007</td><td rowspan="18">&nbsp;&nbsp;&nbsp;&nbsp;</td><td id="1.A.008">1.A.008</td><td id="1.A.009">1.A.009</td><td id="1.A.010">1.A.010</td></tr>
+				<tr><td id="1.A.011">1.A.011</td><td id="1.A.012">1.A.012</td><td id="1.A.013">1.A.013</td><td id="1.A.014">1.A.014</td><td id="1.A.015">1.A.015</td><td id="1.A.016">1.A.016</td><td id="1.A.017">1.A.017</td><td id="1.A.018">1.A.018</td><td id="1.A.019">1.A.019</td><td id="1.A.020">1.A.20</td></tr>
+				<tr><td id="1.A.021">1.A.021</td><td id="1.A.022">1.A.022</td><td id="1.A.023">1.A.023</td><td id="1.A.024">1.A.024</td><td id="1.A.025">1.A.025</td><td id="1.A.026">1.A.026</td><td id="1.A.027">1.A.027</td><td id="1.A.028">1.A.028</td><td id="1.A.029">1.A.029</td><td id="1.A.030">1.A.30</td></tr>
+				<tr><td id="1.A.031">1.A.031</td><td id="1.A.032">1.A.032</td><td id="1.A.033">1.A.033</td><td id="1.A.034">1.A.034</td><td id="1.A.035">1.A.035</td><td id="1.A.036">1.A.036</td><td id="1.A.037">1.A.037</td><td id="1.A.038">1.A.038</td><td id="1.A.039">1.A.039</td><td id="1.A.040">1.A.40</td></tr>
+				<tr><td id="1.A.041">1.A.041</td><td id="1.A.042">1.A.042</td><td id="1.A.043">1.A.043</td><td id="1.A.044">1.A.044</td><td id="1.A.045">1.A.045</td><td id="1.A.046">1.A.046</td><td id="1.A.047">1.A.047</td><td id="1.A.048">1.A.048</td><td id="1.A.049">1.A.049</td><td id="1.A.050">1.A.50</td></tr>
+				<tr><td id="1.A.051">1.A.051</td><td id="1.A.052">1.A.052</td><td id="1.A.053">1.A.053</td><td id="1.A.054">1.A.054</td><td id="1.A.055">1.A.055</td><td id="1.A.056">1.A.056</td><td id="1.A.057">1.A.057</td><td id="1.A.058">1.A.058</td><td id="1.A.059">1.A.059</td><td id="1.A.060">1.A.60</td></tr>
+				<tr><td colspan="12">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+				<tr><td id="1.A.061">1.A.061</td><td id="1.A.062">1.A.062</td><td id="1.A.063">1.A.063</td><td id="1.A.064">1.A.064</td><td id="1.A.065">1.A.065</td><td id="1.A.066">1.A.066</td><td id="1.A.067">1.A.067</td><td id="1.A.068">1.A.068</td><td id="1.A.069">1.A.069</td><td id="1.A.070">1.A.70</td></tr>
+				<tr><td id="1.A.071">1.A.071</td><td id="1.A.072">1.A.072</td><td id="1.A.073">1.A.073</td><td id="1.A.074">1.A.074</td><td id="1.A.075">1.A.075</td><td id="1.A.076">1.A.076</td><td id="1.A.077">1.A.077</td><td id="1.A.078">1.A.078</td><td id="1.A.079">1.A.079</td><td id="1.A.080">1.A.80</td></tr>
+				<tr><td id="1.A.081">1.A.081</td><td id="1.A.082">1.A.082</td><td id="1.A.083">1.A.083</td><td id="1.A.084">1.A.084</td><td id="1.A.085">1.A.085</td><td id="1.A.086">1.A.086</td><td id="1.A.087">1.A.087</td><td id="1.A.088">1.A.088</td><td id="1.A.089">1.A.089</td><td id="1.A.090">1.A.90</td></tr>
+				<tr><td id="1.A.091">1.A.091</td><td id="1.A.092">1.A.092</td><td id="1.A.093">1.A.093</td><td id="1.A.094">1.A.094</td><td id="1.A.095">1.A.095</td><td id="1.A.096">1.A.096</td><td id="1.A.097">1.A.097</td><td id="1.A.098">1.A.098</td><td id="1.A.099">1.A.099</td><td id="1.A.100">1.A.100</td></tr>
+				<tr><td colspan="12">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+				<tr><td id="1.A.101">1.A.101</td><td id="1.A.102">1.A.102</td><td id="1.A.103">1.A.103</td><td id="1.A.104">1.A.104</td><td id="1.A.105">1.A.105</td><td id="1.A.106">1.A.106</td><td id="1.A.107">1.A.107</td><td id="1.A.108">1.A.108</td><td id="1.A.109">1.A.109</td><td id="1.A.110">1.A.110</td></tr>
+				<tr><td id="1.A.111">1.A.111</td><td id="1.A.112">1.A.112</td><td id="1.A.113">1.A.113</td><td id="1.A.114">1.A.114</td><td id="1.A.115">1.A.115</td><td id="1.A.116">1.A.116</td><td id="1.A.117">1.A.117</td><td id="1.A.118">1.A.118</td><td id="1.A.119">1.A.119</td><td id="1.A.120">1.A.120</td></tr>
+				<tr><td id="1.A.121">1.A.121</td><td id="1.A.122">1.A.122</td><td id="1.A.123">1.A.123</td><td id="1.A.124">1.A.124</td><td id="1.A.125">1.A.125</td><td id="1.A.126">1.A.126</td><td id="1.A.127">1.A.127</td><td id="1.A.128">1.A.128</td><td id="1.A.129">1.A.129</td><td id="1.A.130">1.A.130</td></tr>
+				<tr><td id="1.A.131">1.A.131</td><td id="1.A.132">1.A.132</td><td id="1.A.133">1.A.133</td><td id="1.A.134">1.A.134</td><td id="1.A.135">1.A.135</td><td id="1.A.136">1.A.136</td><td id="1.A.137">1.A.137</td><td id="1.A.138">1.A.138</td><td id="1.A.139">1.A.139</td><td id="1.A.140">1.A.140</td></tr>
+				<tr><td id="1.A.141">1.A.141</td><td id="1.A.142">1.A.142</td><td id="1.A.143">1.A.143</td><td id="1.A.144">1.A.144</td><td id="1.A.145">1.A.145</td><td id="1.A.146">1.A.146</td><td id="1.A.147">1.A.147</td><td id="1.A.148">1.A.148</td><td id="1.A.149">1.A.149</td><td id="1.A.150">1.A.150</td></tr>
+				<tr><td id="1.A.151">1.A.151</td><td id="1.A.152">1.A.152</td><td id="1.A.153">1.A.153</td><td id="1.A.154">1.A.154</td><td id="1.A.155">1.A.155</td><td id="1.A.156">1.A.156</td><td id="1.A.157">1.A.157</td><td id="1.A.158">1.A.158</td><td id="1.A.159">1.A.159</td><td id="1.A.160">1.A.160</td></tr>
+			</table>
+		</td>
+		<td id="floor_2" onclick="highlight_floor_plan('floor_2')" style="padding: 10px 10px 10px 10px">
+			<table>
+				<tr><td id="2.A.001">2.A.001</td><td id="2.A.002">2.A.002</td><td id="2.A.003">2.A.003</td><td id="2.A.004">2.A.004</td><td id="2.A.005">2.A.005</td><td rowspan="20">&nbsp;&nbsp;&nbsp;&nbsp;</td><td id="2.B.001">2.B.001</td><td id="2.B.002">2.B.002</td><td id="2.B.003">2.B.003</td><td id="2.B.004">2.B.004</td><td id="2.B.005">2.B.005</td>
+				<tr><td id="2.A.006">2.A.006</td><td id="2.A.007">2.A.007</td><td id="2.A.008">2.A.008</td><td id="2.A.009">2.A.009</td><td id="2.A.010">2.A.010</td><td id="2.B.006">2.B.006</td><td id="2.B.007">2.B.007</td><td id="2.B.008">2.B.008</td><td id="2.B.009">2.B.009</td><td id="2.B.010">2.B.010</td>
+				<tr><td id="2.A.011">2.A.011</td><td id="2.A.012">2.A.012</td><td id="2.A.013">2.A.013</td><td id="2.A.014">2.A.014</td><td id="2.A.015">2.A.015</td><td id="2.B.011">2.B.011</td><td id="2.B.012">2.B.012</td><td id="2.B.013">2.B.013</td><td id="2.B.014">2.B.014</td><td id="2.B.015">2.B.015</td>
+				<tr><td colspan="11"></td></tr>
+				<tr><td id="2.A.016">2.A.016</td><td id="2.A.017">2.A.017</td><td id="2.A.018">2.A.018</td><td id="2.A.019">2.A.019</td><td id="2.A.020">2.A.020</td><td id="2.B.016">2.B.016</td><td id="2.B.017">2.B.017</td><td id="2.B.018">2.B.018</td><td id="2.B.019">2.B.019</td><td id="2.B.020">2.B.020</td>
+				<tr><td id="2.A.021">2.A.021</td><td id="2.A.022">2.A.022</td><td id="2.A.023">2.A.023</td><td id="2.A.024">2.A.024</td><td id="2.A.025">2.A.025</td><td id="2.B.021">2.B.021</td><td id="2.B.022">2.B.022</td><td id="2.B.023">2.B.023</td><td id="2.B.024">2.B.024</td><td id="2.B.025">2.B.025</td>
+				<tr><td colspan="11"></td></tr>
+				<tr><td id="2.A.026">2.A.026</td><td id="2.A.027">2.A.027</td><td id="2.A.028">2.A.028</td><td id="2.A.029">2.A.029</td><td id="2.A.030">2.A.030</td><td id="2.B.026">2.B.026</td><td id="2.B.027">2.B.027</td><td id="2.B.028">2.B.028</td><td id="2.B.029">2.B.029</td><td id="2.B.030">2.B.030</td>
+				<tr><td id="2.A.031">2.A.031</td><td id="2.A.032">2.A.032</td><td id="2.A.033">2.A.033</td><td id="2.A.034">2.A.034</td><td id="2.A.035">2.A.035</td><td id="2.B.031">2.B.031</td><td id="2.B.032">2.B.032</td><td id="2.B.033">2.B.033</td><td id="2.B.034">2.B.034</td><td id="2.B.035">2.B.035</td>
+				<tr><td id="2.A.036">2.A.036</td><td id="2.A.037">2.A.037</td><td id="2.A.038">2.A.038</td><td id="2.A.039">2.A.039</td><td id="2.A.040">2.A.040</td><td id="2.B.036">2.B.036</td><td id="2.B.037">2.B.037</td><td id="2.B.038">2.B.038</td><td id="2.B.039">2.B.039</td><td id="2.B.040">2.B.040</td>
+				<tr><td colspan="11">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+				<tr><td id="2.C.001">2.C.001</td><td id="2.C.002">2.C.002</td><td id="2.C.003">2.C.003</td><td id="2.C.004">2.C.004</td><td id="2.C.005">2.C.005</td><td id="2.D.001">2.D.001</td><td id="2.D.002">2.D.002</td><td id="2.D.003">2.D.003</td><td id="2.D.004">2.D.004</td><td id="2.D.005">2.D.005</td></tr>
+				<tr><td id="2.C.006">2.C.006</td><td id="2.C.007">2.C.007</td><td id="2.C.008">2.C.008</td><td id="2.C.009">2.C.009</td><td id="2.C.010">2.C.010</td><td id="2.D.006">2.D.006</td><td id="2.D.007">2.D.007</td><td id="2.D.008">2.D.008</td><td id="2.D.009">2.D.009</td><td id="2.D.010">2.D.010</td></tr>
+				<tr><td id="2.C.011">2.C.011</td><td id="2.C.012">2.C.012</td><td id="2.C.013">2.C.013</td><td id="2.C.014">2.C.014</td><td id="2.C.015">2.C.015</td><td id="2.D.011">2.D.011</td><td id="2.D.012">2.D.012</td><td id="2.D.013">2.D.013</td><td id="2.D.014">2.D.014</td><td id="2.D.015">2.D.015</td></tr>
+				<tr><td id="2.C.016">2.C.016</td><td id="2.C.017">2.C.017</td><td id="2.C.018">2.C.018</td><td id="2.C.019">2.C.019</td><td id="2.C.020">2.C.020</td><td id="2.D.016">2.D.016</td><td id="2.D.017">2.D.017</td><td id="2.D.018">2.D.018</td><td id="2.D.019">2.D.019</td><td id="2.D.020">2.D.020</td></tr>
+				<tr><td colspan="11"></td></tr>
+				<tr><td id="2.C.021">2.C.021</td><td id="2.C.022">2.C.022</td><td id="2.C.023">2.C.023</td><td id="2.C.024">2.C.024</td><td id="2.C.025">2.C.025</td><td id="2.D.021">2.D.021</td><td id="2.D.022">2.D.022</td><td id="2.D.023">2.D.023</td><td id="2.D.024">2.D.024</td><td id="2.D.025">2.D.025</td></tr>
+				<tr><td id="2.C.026">2.C.026</td><td colspan="3" rowspan="2">Meeting<br>Room</td><td id="2.C.030">2.C.030</td><td id="2.D.026">2.D.026</td><td rowspan="2">Chat<br>Room</td><td rowspan="2">Chat<br>Room</td><td id="2.D.029">2.D.029</td><td id="2.D.030">2.D.030</td></tr>
+				<tr><td id="2.C.031">2.C.031</td><td id="2.C.035">2.C.035</td><td id="2.D.031">2.D.031</td><td id="2.D.033">2.D.033</td><td id="2.D.035">2.D.035</td></tr>
+				<tr><td id="2.C.036">2.C.036</td><td id="2.C.037">2.C.037</td><td id="2.C.038">2.C.038</td><td id="2.C.039">2.C.039</td><td id="2.C.040">2.C.040</td><td id="2.D.036">2.D.036</td><td id="2.D.037">2.D.037</td><td id="2.D.038">2.D.038</td><td id="2.D.039">2.D.039</td><td id="2.D.040">2.D.040</td></tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
